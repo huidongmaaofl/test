@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="Start_Date" prompt="Start_Date?" promptNeeded="false" type="id_String" value="2016-09-25"/>
+    <contextParameter comment="" name="End_Date" prompt="End_Date?" promptNeeded="false" type="id_String" value="2016-09-25"/>
+    <contextParameter comment="" name="StartDate_interval" prompt="StartDate_interval?" promptNeeded="false" type="id_Integer" value="-1"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="0RMsyjmybrE="/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value=""/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value=""/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Talend/5.6.2/studio/workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" value="_BCUy0FT7Eeaxx-GQ_IpdbQ"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:snowflake://ageoflearning.snowflakecomputing.com/?role=etl_worker&amp;db=aoflprod&amp;schema=abc_edw_stg&amp;warehouse=abc_etl_wh&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR">
+      <elementValue elementRef="JAR_NAME" value="snowflake-jdbc-3.0.11.jar"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;net.snowflake.client.jdbc.SnowflakeDriver&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.Redshift_Conn_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.Redshift_Conn_Port"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value=""/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value=""/>
+    <elementParameter field="TEXT" name="USER" value="&quot;talend_etl&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="ZWL+OPUW6faJdkOhlz1EnbTCuWuA5Z5cV24ZL5IpQi9kLPN+enSvEQ=="/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;abc_edw_meta.AOFL_PROJECT_LOGS&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value=""/>
+    <elementParameter field="CHECK" name="UPDATE_COMPONENTS" value="false"/>
+    <elementParameter field="CHECK" name="STATS_DEFAULT_PROJECTSETTING" value="true"/>
+    <elementParameter field="PROPERTY_TYPE" name="PROPERTY_TYPE" value=""/>
+    <routinesParameter id="_UyiNIPX0EeWWKsygvsCDwg" name="DQTechnical"/>
+    <routinesParameter id="_pC_O0PVVEeW3v-xk1uty1w" name="DataOperation"/>
+    <routinesParameter id="_UvTS8PX0EeWWKsygvsCDwg" name="DataQuality"/>
+    <routinesParameter id="_UxN-gPX0EeWWKsygvsCDwg" name="DqStringHandling"/>
+    <routinesParameter id="_pEkjMPVVEeW3v-xk1uty1w" name="Mathematical"/>
+    <routinesParameter id="_pFyEIPVVEeW3v-xk1uty1w" name="Numeric"/>
+    <routinesParameter id="_pHCoYPVVEeW3v-xk1uty1w" name="Relational"/>
+    <routinesParameter id="_pNGNEPVVEeW3v-xk1uty1w" name="SQLike"/>
+    <routinesParameter id="_pINGAPVVEeW3v-xk1uty1w" name="StringHandling"/>
+    <routinesParameter id="_pJam8PVVEeW3v-xk1uty1w" name="TalendDataGenerator"/>
+    <routinesParameter id="_pKoH4PVVEeW3v-xk1uty1w" name="TalendDate"/>
+    <routinesParameter id="_pL7vcPVVEeW3v-xk1uty1w" name="TalendString"/>
+    <routinesParameter id="_FL47UNKuEeKnXdHKUaxwnQ" name="CheckZip"/>
+    <routinesParameter id="_xFoiYOSuEeKgRuMsU-Aatw" name="GeoLocationCalculation"/>
+    <routinesParameter id="_fxLlYMqZEeW_Wu7kq_dgpA" name="HtmlGeneration2"/>
+    <routinesParameter id="_Yql8wKjlEeWukotDNJTWbg" name="HtmlGeneration"/>
+    <routinesParameter id="_9aoGcKT9EeW80p8IK1FyUQ" name="QuerySplitter"/>
+    <routinesParameter id="_u4W7IJJjEea7f4xH-7-lGA" name="compressFiles_in_GZIP_Format"/>
+    <routinesParameter id="_FL47UNKuEeKnXdHKUaxwnQ" name="CheckZip"/>
+    <routinesParameter id="_xFoiYOSuEeKgRuMsU-Aatw" name="GeoLocationCalculation"/>
+    <routinesParameter id="_fxLlYMqZEeW_Wu7kq_dgpA" name="HtmlGeneration2"/>
+    <routinesParameter id="_Yql8wKjlEeWukotDNJTWbg" name="HtmlGeneration"/>
+    <routinesParameter id="_9aoGcKT9EeW80p8IK1FyUQ" name="QuerySplitter"/>
+  </parameters>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;core&quot;, &quot;abc_edw_core&quot;);&#xA;globalMap.put(&quot;stg&quot;, &quot;abc_edw_stg&quot;);&#xA;&#xA;if(!(&quot;&quot;).equals(context.Start_Date) &amp;&amp; !(&quot;&quot;).equals(context.End_Date))&#xA;{&#xA;context.put(&quot;start_dt&quot;, context.Start_Date);&#xA;context.put(&quot;end_dt&quot;, context.End_Date);&#xA;&#xA;globalMap.put(&quot;iteration&quot;,&#xA;TalendDate.diffDate(TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,&#xA;context.End_Date), TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,&#xA;context.Start_Date)));&#xA;&#xA;}&#xA;else if((&quot;&quot;).equals(context.Start_Date) &amp;&amp; (&quot;&quot;).equals(context.End_Date))&#xA;{&#xA;context.put(&quot;start_dt&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,TalendDate.addDate(TalendDate.getCurrentDate(), context.StartDate_interval, &quot;dd&quot;)));&#xA;context.put(&quot;end_dt&quot;,  TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,TalendDate.addDate(TalendDate.getCurrentDate(), -1, &quot;dd&quot;)));&#xA;&#xA;globalMap.put(&quot;iteration&quot;,&#xA;TalendDate.diffDate(TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,&#xA;context.get(&quot;end_dt&quot;).toString()), TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,&#xA;context.get(&quot;start_dt&quot;).toString())&#xA;));&#xA;}&#xA;System.out.println(&quot;Start Date : &quot;+context.get(&quot;start_dt&quot;)+&quot;\nEnd Date :  &quot;+context.get(&quot;end_dt&quot;));&#xA;System.out.println(&quot;Iteration : &quot;+globalMap.get(&quot;iteration&quot;).toString());"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tJDBCConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCConnection_1"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_BCUy0FT7Eeaxx-GQ_IpdbQ"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:snowflake://ageoflearning.snowflakecomputing.com/?role=etl_worker&amp;db=aoflprod&amp;schema=abc_edw_stg&amp;warehouse=abc_etl_wh&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR">
+      <elementValue elementRef="JAR_NAME" value="snowflake-jdbc-3.0.11.jar"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;net.snowflake.client.jdbc.SnowflakeDriver&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;talend_etl&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="ZWL+OPUW6faJdkOhlz1EnbTCuWuA5Z5cV24ZL5IpQi9kLPN+enSvEQ=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="IS_USE_AUTO_COMMIT" value="true"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tLoop" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="RADIO" name="FORLOOP" value="true"/>
+    <elementParameter field="RADIO" name="WHILELOOP" value="false"/>
+    <elementParameter field="TEXT" name="FROM" value="0"/>
+    <elementParameter field="TEXT" name="TO" value="(Long)globalMap.get(&quot;iteration&quot;)"/>
+    <elementParameter field="TEXT" name="STEP" value="1"/>
+    <elementParameter field="CHECK" name="INCREASE" value="true"/>
+    <elementParameter field="TEXT" name="DECLARATION" value="int i=0"/>
+    <elementParameter field="TEXT" name="CONDITION" value="i&lt;10"/>
+    <elementParameter field="TEXT" name="ITERATION" value="i++"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;act_start_date&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,  TalendDate.addDate(TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,context.get(&quot;start_dt&quot;).toString()), ((Integer)globalMap.get(&quot;tLoop_1_CURRENT_VALUE&quot;)) , &quot;dd&quot;)));&#xA;&#xA;//context.put(&quot;act_month&quot;, TalendDate.formatDate(&quot;MM&quot;,  TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,  context.get(&quot;act_start_date&quot;).toString())));&#xA;&#xA;//context.put(&quot;act_year&quot;, TalendDate.formatDate(&quot;yyyy&quot;,  TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,  context.get(&quot;act_start_date&quot;).toString())));&#xA;&#xA;&#xA;System.out.println(&quot;Executing for  &quot;+globalMap.get(&quot;act_start_date&quot;).toString());&#xA;&#xA;&#xA;//context.source_table = TalendDate.formatDate(&quot;yyyy_MM_dd&quot;,TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,context.get(&quot;act_start_date&quot;).toString()));&#xA;globalMap.put(&quot;source_table&quot;, TalendDate.formatDate(&quot;yyyyMMdd&quot;,TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,globalMap.get(&quot;act_start_date&quot;).toString())));&#xA;&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_2"/>
+  </node>
+  <node componentName="tJDBCClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCClose_1"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_1"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;copy into @AOFL_BUCKET/archive_intmd_page_tracker/&quot;+globalMap.get(&quot;source_table&quot;)+&quot;/intmd_page_tracker_&quot;+globalMap.get(&quot;source_table&quot;)+&quot;.txt&#xD;&#xA;from aoflprod.abc_edw_stg.intmd_page_tracker_&quot;+globalMap.get(&quot;source_table&quot;)+&quot; &#xD;&#xA;FILE_FORMAT='util_db.public.test_2_scsv_dq'&#xD;&#xA;OVERWRITE = TRUE&#xD;&#xA;SINGLE = FALSE&#xD;&#xA;HEADER = FALSE&#xD;&#xA;MAX_FILE_SIZE =1000000000 --1 GB&#xD;&#xA;;&#xD;&#xA;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_1"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tJDBCConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCConnection_1" offsetLabelX="0" offsetLabelY="0" source="tJDBCConnection_1" target="tLoop_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tLoop_1" offsetLabelX="0" offsetLabelY="0" source="tLoop_1" target="tJava_2">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tLoop_1" offsetLabelX="0" offsetLabelY="0" source="tLoop_1" target="tJDBCClose_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" source="tJava_2" target="tJDBCRow_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCClose_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+</talendfile:ProcessType>

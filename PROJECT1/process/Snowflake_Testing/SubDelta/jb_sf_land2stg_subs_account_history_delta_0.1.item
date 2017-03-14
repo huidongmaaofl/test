@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="jobName" prompt="jobName?" promptNeeded="false" type="id_String" value="jb_sf_land2stg_account_history_delta"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="0RMsyjmybrE="/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value=""/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value=""/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Talend/5.6.2/studio/workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" value="_BCUy0FT7Eeaxx-GQ_IpdbQ"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:snowflake://ageoflearning.snowflakecomputing.com/?role=etl_worker&amp;db=aoflprod&amp;schema=abc_edw_stg&amp;warehouse=abc_etl_wh&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR">
+      <elementValue elementRef="JAR_NAME" value="snowflake-jdbc-3.0.11.jar"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;net.snowflake.client.jdbc.SnowflakeDriver&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.Redshift_Conn_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.Redshift_Conn_Port"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value=""/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value=""/>
+    <elementParameter field="TEXT" name="USER" value="&quot;talend_etl&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="ZWL+OPUW6faJdkOhlz1EnbTCuWuA5Z5cV24ZL5IpQi9kLPN+enSvEQ=="/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;abc_edw_meta.AOFL_PROJECT_LOGS&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value=""/>
+    <routinesParameter id="_UyiNIPX0EeWWKsygvsCDwg" name="DQTechnical"/>
+    <routinesParameter id="_pC_O0PVVEeW3v-xk1uty1w" name="DataOperation"/>
+    <routinesParameter id="_UvTS8PX0EeWWKsygvsCDwg" name="DataQuality"/>
+    <routinesParameter id="_UxN-gPX0EeWWKsygvsCDwg" name="DqStringHandling"/>
+    <routinesParameter id="_pEkjMPVVEeW3v-xk1uty1w" name="Mathematical"/>
+    <routinesParameter id="_pFyEIPVVEeW3v-xk1uty1w" name="Numeric"/>
+    <routinesParameter id="_pHCoYPVVEeW3v-xk1uty1w" name="Relational"/>
+    <routinesParameter id="_pNGNEPVVEeW3v-xk1uty1w" name="SQLike"/>
+    <routinesParameter id="_pINGAPVVEeW3v-xk1uty1w" name="StringHandling"/>
+    <routinesParameter id="_pJam8PVVEeW3v-xk1uty1w" name="TalendDataGenerator"/>
+    <routinesParameter id="_pKoH4PVVEeW3v-xk1uty1w" name="TalendDate"/>
+    <routinesParameter id="_pL7vcPVVEeW3v-xk1uty1w" name="TalendString"/>
+    <routinesParameter id="_FL47UNKuEeKnXdHKUaxwnQ" name="CheckZip"/>
+    <routinesParameter id="_xFoiYOSuEeKgRuMsU-Aatw" name="GeoLocationCalculation"/>
+    <routinesParameter id="_fxLlYMqZEeW_Wu7kq_dgpA" name="HtmlGeneration2"/>
+    <routinesParameter id="_Yql8wKjlEeWukotDNJTWbg" name="HtmlGeneration"/>
+    <routinesParameter id="_9aoGcKT9EeW80p8IK1FyUQ" name="QuerySplitter"/>
+    <routinesParameter id="_u4W7IJJjEea7f4xH-7-lGA" name="compressFiles_in_GZIP_Format"/>
+    <routinesParameter id="_FL47UNKuEeKnXdHKUaxwnQ" name="CheckZip"/>
+    <routinesParameter id="_xFoiYOSuEeKgRuMsU-Aatw" name="GeoLocationCalculation"/>
+    <routinesParameter id="_fxLlYMqZEeW_Wu7kq_dgpA" name="HtmlGeneration2"/>
+    <routinesParameter id="_Yql8wKjlEeWukotDNJTWbg" name="HtmlGeneration"/>
+    <routinesParameter id="_9aoGcKT9EeW80p8IK1FyUQ" name="QuerySplitter"/>
+  </parameters>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;Job &quot; + context.jobName + &quot; is going to start to do subs delta changes on account history.&quot;);&#xA;globalMap.put(&quot;meta&quot;,&quot;ABC_EDW_META&quot;);&#xA;globalMap.put(&quot;land&quot;,&quot;ABC_EDW_LAND&quot;);&#xA;globalMap.put(&quot;stg&quot;,&quot;ABC_EDW_STG&quot;);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tJDBCConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCConnection_1"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_BCUy0FT7Eeaxx-GQ_IpdbQ"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:snowflake://ageoflearning.snowflakecomputing.com/?role=etl_worker&amp;db=aoflprod&amp;schema=abc_edw_stg&amp;warehouse=abc_etl_wh&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR">
+      <elementValue elementRef="JAR_NAME" value="snowflake-jdbc-3.0.11.jar"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;net.snowflake.client.jdbc.SnowflakeDriver&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;talend_etl&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="ZWL+OPUW6faJdkOhlz1EnbTCuWuA5Z5cV24ZL5IpQi9kLPN+enSvEQ=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="IS_USE_AUTO_COMMIT" value="true"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="snowflake"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;Job &quot; + context.jobName + &quot; completed successfully.&quot;);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_2"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Instantiate global params&#xA;globalMap.put(&quot;meta&quot;,&quot;abc_edw_meta&quot;);&#xA;globalMap.put(&quot;land&quot;,&quot;abc_edw_land&quot;);&#xA;globalMap.put(&quot;stg&quot;,&quot;abc_edw_stg&quot;);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_3"/>
+  </node>
+  <node componentName="tWaitForSqlData" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWaitForSqlData_1"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="TEXT" name="WAIT" value="20"/>
+    <elementParameter field="TEXT" name="MAX_ITERATIONS" value="100"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="TABLE" value="globalMap.get(&quot;meta&quot;)+&quot;.etl_job_handshake&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="OPERATOR" value="=="/>
+    <elementParameter field="TEXT" name="VALUE" value="0"/>
+    <elementParameter field="CLOSED_LIST" name="THEN" value="exitloop"/>
+    <elementParameter field="CHECK" name="ENABLE_WHERE_CLAUSE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="WHERE_CLAUSE" value="&quot;WHERE dependency_name = 'sub_delta'&quot;"/>
+    <elementParameter field="CHECK" name="ENABLE_SQL_STMT" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="SQL_STMT" value="&quot;SELECT COUNT(*) FROM test WHERE name='talend'&quot;"/>
+    <elementParameter field="TEXT" name="LABEL" value="scan etl_job_handshake"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="MEMO" name="COMMENT" value="query must return NO ROWS for the job to continue"/>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_1"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;INSERT INTO &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_job_handshake&#xD;&#xA;(    dependency_name, &#xD;&#xA;     running_job_name,&#xD;&#xA;     running_job_start_time&#xD;&#xA;)&#xD;&#xA;VALUES&#xD;&#xA;(   'sub_delta',&#xD;&#xA;    '&quot;+context.jobName+&quot;', &#xD;&#xA;    to_timestamp_ntz(CURRENT_TIMESTAMP())&#xD;&#xA;);&#xD;&#xA;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="insert etl_job_handshake"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_1"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_3"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;INSERT INTO &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_job_log&#xD;&#xA;(&#xD;&#xA;   run_id,&#xD;&#xA;   job_id,&#xD;&#xA;   start_time,&#xD;&#xA;   job_name,&#xD;&#xA;   job_type,&#xD;&#xA;   job_status,&#xD;&#xA;   created_ts,&#xD;&#xA;   created_by,&#xD;&#xA;   last_updated_ts,&#xD;&#xA;   last_updated_by&#xD;&#xA;)&#xD;&#xA;SELECT&#xD;&#xA;  coalesce(last_row.run_id, 0) + 1 as run_id,&#xD;&#xA;  coalesce(last_row.job_id, 1) as job_id,&#xD;&#xA;  to_timestamp_ntz(CURRENT_TIMESTAMP()) as start_time,&#xD;&#xA;  '&quot;+context.jobName+&quot;' as job_name,&#xD;&#xA;  'delta_load' as job_type,&#xD;&#xA;  'BUSY' as job_status,&#xD;&#xA;  to_timestamp_ntz(CURRENT_TIMESTAMP()) as created_ts,&#xD;&#xA;  '&quot;+context.jobName+&quot;' as created_by,&#xD;&#xA;  to_timestamp_ntz(CURRENT_TIMESTAMP()) as last_updated_ts,&#xD;&#xA;  '&quot;+context.jobName+&quot;' as last_updated_by&#xD;&#xA;FROM&#xD;&#xA;(select * from&#xD;&#xA;    (select *, row_number() over (partition by job_name order by start_time desc)as rn&#xD;&#xA;    from&#xD;&#xA;      (select run_id, start_time, job_id, job_name from &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_job_log where job_name = '&quot;+context.jobName+&quot;' &#xD;&#xA;        union&#xD;&#xA;       select 0, '1970-01-01 00:00:00':: timestamp, 0, '&quot;+context.jobName+&quot;'  &#xD;&#xA;      )&#xD;&#xA;     )&#xD;&#xA;     where rn = 1 &#xD;&#xA;  )&#xD;&#xA;  last_row;&#xD;&#xA;&#xD;&#xA;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="insert etl_job_log"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_3"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_4"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;INSERT INTO &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_hist&#xD;&#xA;SELECT&#xD;&#xA;  last_row.run_id + 1 as run_id,&#xD;&#xA;  last_row.delta_load_table_key,&#xD;&#xA;  last_row.source_table,&#xD;&#xA; '&quot;+context.jobName+&quot;' as etl_job_name, -- V9 set proper job name&#xD;&#xA;  to_timestamp_ntz(CURRENT_TIMESTAMP()) as run_time_ts,&#xD;&#xA;  null as num_rows_loaded,&#xD;&#xA;  last_row.delta_column_1_ts_value,&#xD;&#xA;  last_row.delta_column_2_ts_value,&#xD;&#xA;  last_row.delta_column_3_ts_value,&#xD;&#xA;  last_row.delta_column_1_seq_value,&#xD;&#xA;  last_row.delta_column_2_seq_value,&#xD;&#xA;  last_row.delta_column_3_seq_value,&#xD;&#xA;  to_timestamp_ntz(CURRENT_TIMESTAMP()) as created_ts,&#xD;&#xA;  'abc_etl_dlt_new_run' as created_by,&#xD;&#xA;  to_timestamp_ntz(CURRENT_TIMESTAMP()) as last_updated_ts,&#xD;&#xA;  'abc_etl_dlt_new_run' as last_updated_by&#xD;&#xA;FROM&#xD;&#xA;(select * from (select *, row_number() over (partition by delta_load_table_key order by run_time_ts desc) rn from &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_hist&#xD;&#xA;where source_table like '%account_history%' ) where rn = 1&#xD;&#xA;)last_row;&#xD;&#xA;&quot;&#xD;&#xA;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="insert etl_delta_load_hist"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_4"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_5"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE FROM &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_history;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="dlt_account&lt;br>_history"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_5"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_6"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE FROM &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_trx_history;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="dlt_trx_history"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_6"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_2"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;delete from &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_hist&#xD;&#xA;using&#xD;&#xA;(select run_id, source_table, etl_job_name, run_time_ts&#xD;&#xA;from&#xD;&#xA;    &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_hist&#xD;&#xA;where&#xD;&#xA;    run_time_ts >= &#xD;&#xA;        (select start_time from&#xD;&#xA;                (select&#xD;&#xA;                    start_time, job_status, run_id, row_number() over (partition by job_name order by start_time desc) as rn&#xD;&#xA;                from&#xD;&#xA;                    &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_job_log &#xD;&#xA;                where &#xD;&#xA;                    job_name = '&quot;+context.jobName+&quot;' &#xD;&#xA;                )&#xD;&#xA;        where &#xD;&#xA;            rn = 1 and job_status = 'BUSY'&#xD;&#xA;        )&#xD;&#xA; )dh_unfinished&#xD;&#xA; where&#xD;&#xA;   &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_hist.run_id = dh_unfinished.run_id  and &#xD;&#xA;   &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_hist.source_table = dh_unfinished.source_table and&#xD;&#xA;   &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_hist.etl_job_name =  '&quot;+context.jobName+&quot;' ;&#xD;&#xA;   &#xD;&#xA;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="delete etl_delta_load_hist"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_2"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_7"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE FROM &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_incentivized_free_trial_sub;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="dlt_incentivized&lt;br>_free_trial_sub"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_7"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_8"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;INSERT INTO &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_history&#xD;&#xA;SELECT &#xD;&#xA;    account_domain,&#xD;&#xA;    id,&#xD;&#xA;    activity_id,&#xD;&#xA;    activity_date::timestamp,&#xD;&#xA;    account_id,&#xD;&#xA;    account_item_id,&#xD;&#xA;    account_item_primary,&#xD;&#xA;    account_item_status,&#xD;&#xA;    payer_id,&#xD;&#xA;    activity_price,&#xD;&#xA;    account_item_discount,&#xD;&#xA;    product_id,&#xD;&#xA;    product_phase,&#xD;&#xA;    product_opt_out,&#xD;&#xA;    payment_cc_id,&#xD;&#xA;    case -- V5 better trap for string dates in input, null dates come in as either '0000-00-00 00:00:00' or '0'&#xD;&#xA;       when trim(next_billing_date) = '' or trim(substring(next_billing_date, 0, 1)) = '0' then null &#xD;&#xA;       else  next_billing_date::timestamp &#xD;&#xA;    end as next_billing_date,&#xD;&#xA;    case -- V5 better trap for string dates in input&#xD;&#xA;       when trim(termination_date) = '' or trim(substring(termination_date, 0, 1)) = '0' then null &#xD;&#xA;       else termination_date::timestamp &#xD;&#xA;    end as termination_date,&#xD;&#xA;    trx_history_id,&#xD;&#xA;    payment_method,&#xD;&#xA;    country_code,&#xD;&#xA;    refund_id,&#xD;&#xA;      is_deleted,            -- V8 virtual deletes from the source system&#xD;&#xA;    last_updated_ts as src_last_updated_ts  -- V8 last updated timestamp from the source system&#xD;&#xA;&#xD;&#xA;from&#xD;&#xA;  ( -- union&#xD;&#xA;  SELECT &#xD;&#xA;    '.com' as account_domain, &#xD;&#xA;    stg.*&#xD;&#xA;   from&#xD;&#xA;    (select * from &#xD;&#xA;      (select *, row_number() over(partition by id order by 1) as rn &#xD;&#xA;       from&#xD;&#xA;        &quot;+globalMap.get(&quot;land&quot;)+&quot;.account_history&#xD;&#xA;       )where rn = 1 -- v2 remove duplicates&#xD;&#xA;        and -- v5 remove junk activity dates&#xD;&#xA;        activity_date is not null and trim(substring(activity_date, 0, 1)) &lt;> '0'&#xD;&#xA;     )stg &#xD;&#xA;  CROSS JOIN&#xD;&#xA;    (select &#xD;&#xA;      delta_load_table_key, &#xD;&#xA;      delta_overlap_value, &#xD;&#xA;      delta_overlap_unit &#xD;&#xA;     from &#xD;&#xA;      &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_table &#xD;&#xA;     where &#xD;&#xA;      source_table_schema_name = '&quot;+globalMap.get(&quot;land&quot;)+&quot;' and &#xD;&#xA;      source_table_name = 'account_history'&#xD;&#xA;    ) dt&#xD;&#xA;  LEFT OUTER JOIN&#xD;&#xA;    (select &#xD;&#xA;      delta_load_table_key, delta_column_1_ts_value &#xD;&#xA;    from &#xD;&#xA;      (select &#xD;&#xA;        delta_load_table_key, delta_column_1_ts_value, row_number() over (partition by delta_load_table_key order by run_time_ts desc) as rn &#xD;&#xA;      from &#xD;&#xA;        &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_hist) where rn = 1&#xD;&#xA;    ) dh&#xD;&#xA;  ON&#xD;&#xA;    dh.delta_load_table_key = dt.delta_load_table_key&#xD;&#xA;  &#xD;&#xA; WHERE -- V8 change delta column to last_updated_ts&#xD;&#xA;    stg.last_updated_ts >= coalesce(case dt.delta_overlap_unit&#xD;&#xA;                                      when 'seconds' then dateadd(seconds, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'minutes' then dateadd(minutes, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'hours' then dateadd(hours, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'days' then dateadd(days, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'weeks' then dateadd(week, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'months' then dateadd(months, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                     else dh.delta_column_1_ts_value&#xD;&#xA;                                    end, dateadd('day', -1,to_timestamp_ntz(CURRENT_TIMESTAMP())))&#xD;&#xA; &#xD;&#xA;                               &#xD;&#xA;  UNION ALL&#xD;&#xA; &#xD;&#xA;  SELECT &#xD;&#xA;    '.cn' as account_domain,&#xD;&#xA;    stg.*&#xD;&#xA;  FROM&#xD;&#xA;    (select * from &#xD;&#xA;      (select *, row_number() over(partition by id order by 1) as rn &#xD;&#xA;       from&#xD;&#xA;        &quot;+globalMap.get(&quot;land&quot;)+&quot;.account_history_cn&#xD;&#xA;       )where rn = 1 -- v2 remove duplicates&#xD;&#xA;        and -- v5 remove junk activity dates&#xD;&#xA;        activity_date is not null and trim(substring(activity_date, 0, 1)) &lt;> '0'&#xD;&#xA;     )stg &#xD;&#xA;  CROSS JOIN&#xD;&#xA;    (select &#xD;&#xA;      delta_load_table_key, &#xD;&#xA;      delta_overlap_value, &#xD;&#xA;      delta_overlap_unit &#xD;&#xA;     from &#xD;&#xA;      &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_table &#xD;&#xA;     where &#xD;&#xA;      source_table_schema_name = '&quot;+globalMap.get(&quot;land&quot;)+&quot;' and &#xD;&#xA;      source_table_name = 'account_history_cn'&#xD;&#xA;    ) dt&#xD;&#xA;  LEFT OUTER JOIN&#xD;&#xA;    (select &#xD;&#xA;      delta_load_table_key, delta_column_1_ts_value &#xD;&#xA;    from &#xD;&#xA;      (select &#xD;&#xA;        delta_load_table_key, delta_column_1_ts_value, row_number() over (partition by delta_load_table_key order by run_time_ts desc) as rn &#xD;&#xA;      from &#xD;&#xA;        &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_hist) where rn = 1&#xD;&#xA;    ) dh&#xD;&#xA;  ON&#xD;&#xA;    dh.delta_load_table_key = dt.delta_load_table_key&#xD;&#xA;&#xD;&#xA;WHERE -- V8 change delta column to last_updated_ts&#xD;&#xA;    stg.last_updated_ts >=coalesce(case dt.delta_overlap_unit&#xD;&#xA;                                      when 'seconds' then dateadd(seconds, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'minutes' then dateadd(minutes, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'hours' then dateadd(hours, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'days' then dateadd(days, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'weeks' then dateadd(week, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'months' then dateadd(months, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      else dh.delta_column_1_ts_value&#xD;&#xA;                                    end, dateadd('day', -1,to_timestamp_ntz(CURRENT_TIMESTAMP())))&#xD;&#xA;                                   &#xD;&#xA;  UNION ALL&#xD;&#xA; &#xD;&#xA;  SELECT &#xD;&#xA;    '.tw' as account_domain,&#xD;&#xA;    stg.*&#xD;&#xA;  FROM&#xD;&#xA;    (select * from &#xD;&#xA;      (select *, row_number() over(partition by id order by 1) as rn &#xD;&#xA;       from&#xD;&#xA;        &quot;+globalMap.get(&quot;land&quot;)+&quot;.account_history_tw&#xD;&#xA;       )where rn = 1  -- v2 remove duplicates&#xD;&#xA;       and -- v5 remove junk activity dates&#xD;&#xA;       activity_date is not null and trim(substring(activity_date, 0, 1)) &lt;> '0'&#xD;&#xA;     )stg &#xD;&#xA;  CROSS JOIN&#xD;&#xA;    (select &#xD;&#xA;      delta_load_table_key, &#xD;&#xA;      delta_overlap_value, &#xD;&#xA;      delta_overlap_unit &#xD;&#xA;     from &#xD;&#xA;      &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_table &#xD;&#xA;     where &#xD;&#xA;      source_table_schema_name = '&quot;+globalMap.get(&quot;land&quot;)+&quot;' and &#xD;&#xA;      source_table_name = 'account_history_tw'&#xD;&#xA;    ) dt&#xD;&#xA;  LEFT OUTER JOIN&#xD;&#xA;    (select &#xD;&#xA;      delta_load_table_key, delta_column_1_ts_value &#xD;&#xA;    from &#xD;&#xA;      (select &#xD;&#xA;        delta_load_table_key, delta_column_1_ts_value, row_number() over (partition by delta_load_table_key order by run_time_ts desc) as rn &#xD;&#xA;      from &#xD;&#xA;        &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_hist) where rn = 1&#xD;&#xA;    ) dh&#xD;&#xA;  ON&#xD;&#xA;    dh.delta_load_table_key = dt.delta_load_table_key&#xD;&#xA;&#xD;&#xA;WHERE -- V8 change delta column to last_updated_ts&#xD;&#xA;    stg.last_updated_ts >= coalesce(case dt.delta_overlap_unit&#xD;&#xA;                                      when 'seconds' then dateadd(seconds, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'minutes' then dateadd(minutes, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'hours' then dateadd(hours, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'days' then dateadd(days, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'weeks' then dateadd(week, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      when 'months' then dateadd(months, dt.delta_overlap_value * -1, dh.delta_column_1_ts_value)&#xD;&#xA;                                      else dh.delta_column_1_ts_value&#xD;&#xA;                                    end, dateadd('day', -1,to_timestamp_ntz(CURRENT_TIMESTAMP())))&#xD;&#xA;);&#xD;&#xA;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="insert dlt_account_history"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_8"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_9"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;INSERT INTO &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_trx_history&#xD;&#xA;SELECT DISTINCT  -- V5 added distinct to remove some duplicate rows from the joins&#xD;&#xA;  account_domain, &#xD;&#xA;  id,  &#xD;&#xA;  member_id, --payer_id&#xD;&#xA;  customer_number, -- ident for cc providers&#xD;&#xA;  trx_date,&#xD;&#xA;  trx_reason,&#xD;&#xA;  trx_updater,&#xD;&#xA;  trx_processor,&#xD;&#xA;  trx_payment_type,&#xD;&#xA;  trx_amount,&#xD;&#xA;  trx_authcode,&#xD;&#xA;  trx_refnum,&#xD;&#xA;  trx_result,&#xD;&#xA;  trx_errorcode,&#xD;&#xA;trim(translate(trx_errortext, '\&quot;;,', '   ')) as trx_errortext, -- V8, error text may contain characters that will cause trouble for unloading/loading to/from S3&#xD;&#xA;  country_code,&#xD;&#xA;   paypal_payer_id,&#xD;&#xA;  paypal_billing_agreement_id,&#xD;&#xA;  distributor_id,&#xD;&#xA;  alipay_buyer_id,&#xD;&#xA;  shopping_customer_id,&#xD;&#xA;is_deleted,           -- V8 virtual deletes from source system&#xD;&#xA;  last_updated_ts as src_last_updated_ts,  -- V8 last updated timestamp from the source system&#xD;&#xA;   void_success as trx_voided, &#xD;&#xA;  void_time as trx_voided_date,&#xD;&#xA;  stl_date as trx_stl_date,&#xD;&#xA;  cc_type as trx_cc_type&#xD;&#xA;FROM&#xD;&#xA;  (select &#xD;&#xA;    '.com' as account_domain,&#xD;&#xA;    trx.*,&#xD;&#xA;    trx_void.void_success,&#xD;&#xA;    trx_void.void_time,&#xD;&#xA;    trx_stl.stl_date,&#xD;&#xA;    trx_cc.cc_type&#xD;&#xA;   from&#xD;&#xA;    (select * from &#xD;&#xA;      (select *, row_number() over(partition by id order by 1) as rn &#xD;&#xA;       from&#xD;&#xA;        &quot;+globalMap.get(&quot;land&quot;)+&quot;.transaction_history&#xD;&#xA;       )where rn = 1 -- v2 remove duplicates&#xD;&#xA;     )trx&#xD;&#xA;   inner join&#xD;&#xA;    &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_history ah&#xD;&#xA;   on&#xD;&#xA;    ah.trx_history_id = trx.id and&#xD;&#xA;    ah.account_domain = '.com'&#xD;&#xA;   left outer join&#xD;&#xA;    &quot;+globalMap.get(&quot;land&quot;)+&quot;.trx_history_void trx_void&#xD;&#xA;   on &#xD;&#xA;    trx_void.trx_history_id = trx.id &#xD;&#xA;   left outer join&#xD;&#xA;    &quot;+globalMap.get(&quot;land&quot;)+&quot;.trx_history_stl trx_stl&#xD;&#xA;   on &#xD;&#xA;    trx_stl.trx_history_id = trx.id&#xD;&#xA;   left outer join&#xD;&#xA;    &quot;+globalMap.get(&quot;land&quot;)+&quot;.trx_history_cc_types trx_cc&#xD;&#xA;   on &#xD;&#xA;    trx_cc.trx_history_id = trx.id&#xD;&#xA; &#xD;&#xA;  union all -- V5 change union to union all &#xD;&#xA;  &#xD;&#xA;  select &#xD;&#xA;    '.cn' as account_domain,&#xD;&#xA;    trx.*,&#xD;&#xA;    trx_void.void_success,&#xD;&#xA;    trx_void.void_time,&#xD;&#xA;    trx_stl.stl_date,&#xD;&#xA;    trx_cc.cc_type&#xD;&#xA;   from&#xD;&#xA;    (select * from &#xD;&#xA;      (select *, row_number() over(partition by id order by 1) as rn &#xD;&#xA;       from&#xD;&#xA;        &quot;+globalMap.get(&quot;land&quot;)+&quot;.transaction_history_cn&#xD;&#xA;       )where rn = 1 -- v2 remove duplicates&#xD;&#xA;     )trx&#xD;&#xA;   inner join&#xD;&#xA;    &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_history ah&#xD;&#xA;   on&#xD;&#xA;    ah.trx_history_id = trx.id and&#xD;&#xA;    ah.account_domain = '.cn'&#xD;&#xA;   left outer join&#xD;&#xA;    &quot;+globalMap.get(&quot;land&quot;)+&quot;.trx_history_void_cn trx_void&#xD;&#xA;   on &#xD;&#xA;    trx_void.trx_history_id = trx.id &#xD;&#xA;   left outer join&#xD;&#xA;    &quot;+globalMap.get(&quot;land&quot;)+&quot;.trx_history_stl_cn trx_stl&#xD;&#xA;   on &#xD;&#xA;    trx_stl.trx_history_id = trx.id&#xD;&#xA;   left outer join&#xD;&#xA;    &quot;+globalMap.get(&quot;land&quot;)+&quot;.trx_history_cc_types_cn trx_cc&#xD;&#xA;   on &#xD;&#xA;    trx_cc.trx_history_id = trx.id&#xD;&#xA;    &#xD;&#xA;  union all  -- V5 change union to union all &#xD;&#xA;  &#xD;&#xA;  select &#xD;&#xA;    '.tw' as account_domain,&#xD;&#xA;    trx.*,&#xD;&#xA;    trx_void.void_success,&#xD;&#xA;    trx_void.void_time,&#xD;&#xA;    trx_stl.stl_date,&#xD;&#xA;    trx_cc.cc_type&#xD;&#xA;   from&#xD;&#xA;    (select * from &#xD;&#xA;      (select *, row_number() over(partition by id order by 1) as rn &#xD;&#xA;       from&#xD;&#xA;        &quot;+globalMap.get(&quot;land&quot;)+&quot;.transaction_history_tw&#xD;&#xA;       )where rn = 1 -- v2 remove duplicates&#xD;&#xA;     )trx&#xD;&#xA;   inner join&#xD;&#xA;    &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_history ah&#xD;&#xA;   on&#xD;&#xA;    ah.trx_history_id = trx.id and&#xD;&#xA;    ah.account_domain = '.tw'&#xD;&#xA;   left outer join&#xD;&#xA;    &quot;+globalMap.get(&quot;land&quot;)+&quot;.trx_history_void_tw trx_void&#xD;&#xA;   on &#xD;&#xA;    trx_void.trx_history_id = trx.id &#xD;&#xA;   left outer join&#xD;&#xA;    &quot;+globalMap.get(&quot;land&quot;)+&quot;.trx_history_stl_tw trx_stl&#xD;&#xA;   on &#xD;&#xA;    trx_stl.trx_history_id = trx.id&#xD;&#xA;   left outer join&#xD;&#xA;    &quot;+globalMap.get(&quot;land&quot;)+&quot;.trx_history_cc_types_tw trx_cc&#xD;&#xA;   on &#xD;&#xA;    trx_cc.trx_history_id = trx.id&#xD;&#xA;  ) -- union&#xD;&#xA;  &#xD;&#xA;;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="insert dlt_trx_history"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_9"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_10"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;INSERT INTO &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_incentivized_free_trial_sub&#xD;&#xA;SELECT DISTINCT   -- V5 added distinct to prevent duplicate entries&#xD;&#xA;  account_domain,&#xD;&#xA;  conversion_account_history_id, &#xD;&#xA;  member_id, &#xD;&#xA;  conversion_activity_date,&#xD;&#xA;  conversion_activity_id,&#xD;&#xA; is_deleted,  -- V8 virtual delete&#xD;&#xA;  last_updated_ts as src_last_updated_ts -- V8 source last updated timestamp&#xD;&#xA;&#xD;&#xA;FROM&#xD;&#xA;  (SELECT &#xD;&#xA;    '.com' as account_domain,&#xD;&#xA;    stg.*&#xD;&#xA;  FROM&#xD;&#xA;    (select * from &#xD;&#xA;      (select *, row_number() over(partition by conversion_account_history_id order by 1) as rn &#xD;&#xA;       from&#xD;&#xA;        &quot;+globalMap.get(&quot;land&quot;)+&quot;.incentivized_free_trial_subs&#xD;&#xA;       where&#xD;&#xA;        conversion_activity_date is not null -- V4 added filter to remove null entries&#xD;&#xA;       )where rn = 1 -- v2 remove duplicates&#xD;&#xA;     )stg &#xD;&#xA;  INNER JOIN&#xD;&#xA;    &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_history ah&#xD;&#xA;   ON&#xD;&#xA;    ah.id = stg.conversion_account_history_id and&#xD;&#xA;    ah.account_domain = '.com'&#xD;&#xA;                                &#xD;&#xA;  UNION ALL&#xD;&#xA; &#xD;&#xA;  SELECT &#xD;&#xA;    '.cn' as account_domain,&#xD;&#xA;    stg.*&#xD;&#xA;  FROM&#xD;&#xA;    (select * from &#xD;&#xA;      (select *, row_number() over(partition by conversion_account_history_id order by 1) as rn &#xD;&#xA;       from&#xD;&#xA;        &quot;+globalMap.get(&quot;land&quot;)+&quot;.incentivized_free_trial_subs_cn&#xD;&#xA;       where&#xD;&#xA;        conversion_activity_date is not null -- V4 added filter to remove null entries&#xD;&#xA;       )where rn = 1 -- v2 remove duplicates&#xD;&#xA;     )stg &#xD;&#xA;  INNER JOIN&#xD;&#xA;    &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_history ah&#xD;&#xA;   ON&#xD;&#xA;    ah.id = stg.conversion_account_history_id and&#xD;&#xA;    ah.account_domain = '.cn'&#xD;&#xA;                                   &#xD;&#xA;  UNION ALL&#xD;&#xA; &#xD;&#xA;  SELECT &#xD;&#xA;    '.tw' as account_domain,&#xD;&#xA;    stg.*&#xD;&#xA;  FROM&#xD;&#xA;    (select * from &#xD;&#xA;      (select *, row_number() over(partition by conversion_account_history_id order by 1) as rn &#xD;&#xA;       from&#xD;&#xA;        &quot;+globalMap.get(&quot;land&quot;)+&quot;.incentivized_free_trial_subs_tw&#xD;&#xA;       where&#xD;&#xA;        conversion_activity_date is not null -- V4 added filter to remove null entries&#xD;&#xA;       )where rn = 1 -- v2 remove duplicates&#xD;&#xA;     )stg &#xD;&#xA;  INNER JOIN&#xD;&#xA;    &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_history ah&#xD;&#xA;   ON&#xD;&#xA;    ah.id = stg.conversion_account_history_id and&#xD;&#xA;    ah.account_domain = '.tw'&#xD;&#xA;  ) -- union&#xD;&#xA;;&#xD;&#xA;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="insert incentiviz_free_trial_sub"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_10"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="547">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_11"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE FROM &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_activity&#xD;&#xA;USING&#xD;&#xA;(select distinct account_domain, id from &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_history) dlt&#xD;&#xA;WHERE&#xD;&#xA;  dlt.account_domain = &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_activity.account_domain and&#xD;&#xA;  dlt.id = &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_activity.account_hist_id;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="delete dlt_account_activity"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_11"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_12"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot; insert into &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_activity&#xD;&#xA;SELECT &#xD;&#xA;  hist.account_domain,&#xD;&#xA;  hist.id as account_hist_id,&#xD;&#xA;  hist.account_id,&#xD;&#xA;  hist.payer_id,&#xD;&#xA;  hist.product_id,&#xD;&#xA;  hist.product_phase,&#xD;&#xA;  hist.product_opt_out,&#xD;&#xA;  hist.activity_id,&#xD;&#xA;  hist.activity_date,&#xD;&#xA;  date_trunc('day', hist.activity_date)::date as activity_day,&#xD;&#xA;  date_part('year', hist.activity_date) * 100 + date_part('month', hist.activity_date) as activity_year_month,&#xD;&#xA;  hist.activity_price,&#xD;&#xA;  hist.account_item_id,&#xD;&#xA;  hist.account_item_status,&#xD;&#xA;  hist.account_item_discount,&#xD;&#xA;  hist.next_billing_date,&#xD;&#xA;  hist.termination_date,&#xD;&#xA;  hist.payment_method,&#xD;&#xA;  hist.country_code,&#xD;&#xA;  hist.refund_id,&#xD;&#xA;  hist.trx_history_id,&#xD;&#xA;  trx.trx_date, -- V4 added&#xD;&#xA;  trx.trx_reason,&#xD;&#xA;  trx.trx_processor,&#xD;&#xA;  trx.trx_updater,&#xD;&#xA;  trx.trx_result,&#xD;&#xA;  trx.trx_errorcode as trx_error_code,&#xD;&#xA;  trx.trx_amount,&#xD;&#xA;  trx.trx_payment_type,&#xD;&#xA;  trx.trx_voided,&#xD;&#xA;  trx.trx_voided_date,&#xD;&#xA;  trx.trx_stl_date as trx_settled_date,&#xD;&#xA;  trx.trx_cc_type,&#xD;&#xA;  inc.conversion_activity_date,&#xD;&#xA;  inc.conversion_activity_id,&#xD;&#xA;hist.is_deleted,  -- V8 virtual deletes, from the source system&#xD;&#xA;  hist.src_last_updated_ts, -- V8 last updated timestamp, from the source system&#xD;&#xA;   to_timestamp_ntz(CURRENT_TIMESTAMP()) as created_ts,&#xD;&#xA;  'abc_etl_dlt_account_activity_insert' as created_by&#xD;&#xA;FROM&#xD;&#xA;  &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_history hist&#xD;&#xA;LEFT OUTER JOIN &#xD;&#xA;  &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_trx_history trx&#xD;&#xA;ON&#xD;&#xA;  trx.id = hist.trx_history_id and&#xD;&#xA;  trx.account_domain = hist.account_domain&#xD;&#xA;LEFT OUTER JOIN&#xD;&#xA;  &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_incentivized_free_trial_sub inc&#xD;&#xA;ON&#xD;&#xA;  inc.conversion_account_history_id = hist.id and&#xD;&#xA;  inc.account_domain = hist.account_domain&#xD;&#xA;;&#xD;&#xA;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="dlt_account_activity"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_12"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_13"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;UPDATE &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_hist SET &#xD;&#xA;  delta_column_1_ts_value = meta.delta_col_ts_val,&#xD;&#xA;  delta_column_1_seq_value = meta.delta_col_seq_val,&#xD;&#xA;  num_rows_loaded = meta.num_rows_loaded,&#xD;&#xA;  last_updated_ts = to_timestamp_ntz(CURRENT_TIMESTAMP()),&#xD;&#xA;  last_updated_by = 'jb_land2stg_account_history_delta_upd_val' &#xD;&#xA;FROM &#xD;&#xA;  (select &#xD;&#xA;    dh.run_id, &#xD;&#xA;    dt.delta_load_table_key, &#xD;&#xA;    -- V9 when landing tables don't have any new data, set the delta column value to the source's last_updated_ts value &#xD;&#xA;    -- otherwise a null value would be inserted in the delta load hist which in turn would signal this run was invalid (and ignored for other tables)&#xD;&#xA;    -- We add the value of the overlap + 1 second to this last_updated_ts to avoid reloading the same rows everytime  &#xD;&#xA;    coalesce(tables.delta_col_ts_val, &#xD;&#xA;       dateadd(seconds, 1,&#xD;&#xA;          coalesce(case dt.delta_overlap_unit&#xD;&#xA;                     when 'seconds' then dateadd(seconds, dt.delta_overlap_value, land_tables.delta_col_ts_val)&#xD;&#xA;                     when 'minutes' then dateadd(minutes, dt.delta_overlap_value, land_tables.delta_col_ts_val)&#xD;&#xA;                     when 'hours' then dateadd(hours, dt.delta_overlap_value, land_tables.delta_col_ts_val)&#xD;&#xA;                     when 'days' then dateadd(days, dt.delta_overlap_value, land_tables.delta_col_ts_val)&#xD;&#xA;                     when 'weeks' then dateadd(week, dt.delta_overlap_value, land_tables.delta_col_ts_val)&#xD;&#xA;                     when 'months' then dateadd(months, dt.delta_overlap_value, land_tables.delta_col_ts_val)&#xD;&#xA;                     else land_tables.delta_col_ts_val&#xD;&#xA;                   end, dateadd('day', -1,to_timestamp_ntz(CURRENT_TIMESTAMP()))&#xD;&#xA;                  )&#xD;&#xA;               )&#xD;&#xA;             )::timestamp as delta_col_ts_val,&#xD;&#xA;    tables.delta_col_seq_val::bigint as delta_col_seq_val,&#xD;&#xA;    coalesce(tables.num_rows_loaded, 0) as num_rows_loaded  -- V8 corrected typo, V9 set to zero when no new rows loaded&#xD;&#xA;  from -- V9 add delta_overlap_value and unit &#xD;&#xA;    (select delta_load_table_key, source_table_schema_name, source_table_name, delta_overlap_value, delta_overlap_unit from &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_table&#xD;&#xA;    ) dt&#xD;&#xA;  inner join&#xD;&#xA;    (select run_id, delta_load_table_key from &#xD;&#xA;      (select run_id, delta_load_table_key, row_number() over (partition by delta_load_table_key order by run_time_ts desc) as rn from &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_hist) where rn = 1&#xD;&#xA;    ) dh&#xD;&#xA;  on&#xD;&#xA;    dh.delta_load_table_key = dt.delta_load_table_key&#xD;&#xA;  inner join -- V8 use src_last_updated_ts as a delta column&#xD;&#xA;    (select '&quot;+globalMap.get(&quot;land&quot;)+&quot;' as schema_name, 'account_history' as table_name, max(src_last_updated_ts) as delta_col_ts_val, null as delta_col_seq_val, count(*) as num_rows_loaded from &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_history where account_domain = '.com'&#xD;&#xA;      union&#xD;&#xA;    select '&quot;+globalMap.get(&quot;land&quot;)+&quot;' as schema_name, 'account_history_cn' as table_name, max(src_last_updated_ts) as delta_col_ts_val, null as delta_col_seq_val, count(*) as num_rows_loaded from &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_history where account_domain = '.cn'&#xD;&#xA;      union&#xD;&#xA;    select '&quot;+globalMap.get(&quot;land&quot;)+&quot;' as schema_name, 'account_history_tw' as table_name, max(src_last_updated_ts) as delta_col_ts_val, null as delta_col_seq_val, count(*) as num_rows_loaded from &quot;+globalMap.get(&quot;stg&quot;)+&quot;.dlt_account_history where account_domain = '.tw'&#xD;&#xA;  )tables&#xD;&#xA;  on&#xD;&#xA;    tables.schema_name = dt.source_table_schema_name and tables.table_name = dt.source_table_name&#xD;&#xA;  inner join  -- V9 fetch the max value of the last_updated_ts in case nothing was loaded into the dlt_account_history table for that domain&#xD;&#xA;    (select '&quot;+globalMap.get(&quot;land&quot;)+&quot;' as schema_name, 'account_history' as table_name, max(last_updated_ts) as delta_col_ts_val from &quot;+globalMap.get(&quot;land&quot;)+&quot;.account_history&#xD;&#xA;      union&#xD;&#xA;    select '&quot;+globalMap.get(&quot;land&quot;)+&quot;' as schema_name, 'account_history_cn' as table_name, max(last_updated_ts) as delta_col_ts_val from &quot;+globalMap.get(&quot;land&quot;)+&quot;.account_history_cn&#xD;&#xA;      union&#xD;&#xA;    select '&quot;+globalMap.get(&quot;land&quot;)+&quot;' as schema_name, 'account_history_tw' as table_name, max(last_updated_ts) as delta_col_ts_val from &quot;+globalMap.get(&quot;land&quot;)+&quot;.account_history_tw&#xD;&#xA;    )land_tables&#xD;&#xA;  on&#xD;&#xA;    land_tables.schema_name = dt.source_table_schema_name and land_tables.table_name = dt.source_table_name&#xD;&#xA;  )meta&#xD;&#xA;WHERE&#xD;&#xA;  &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_hist.run_id = meta.run_id and&#xD;&#xA;  &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_delta_load_hist.delta_load_table_key = meta.delta_load_table_key;&#xD;&#xA;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="update etl_delta_load"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_13"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_14"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;DELETE FROM &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_job_handshake &#xD;&#xA;WHERE dependency_name =  'sub_delta' and running_job_name =  '&quot;+context.jobName+&quot;';&#xD;&#xA;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="delete etl_job_handshake"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_14"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_15"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Tools-Studio-20150508_1414-V5.6.2\configuration\lib\java"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;UPDATE &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_job_log SET&#xD;&#xA;  job_status = 'DONE',&#xD;&#xA;  end_time = to_timestamp_ntz(CURRENT_TIMESTAMP()),&#xD;&#xA;  last_updated_ts = to_timestamp_ntz(CURRENT_TIMESTAMP()),&#xD;&#xA;  last_updated_by =  '&quot;+context.jobName+&quot;'&#xD;&#xA;WHERE run_id = (select &#xD;&#xA;                  max(run_id) &#xD;&#xA;               from &#xD;&#xA;                  &quot;+globalMap.get(&quot;meta&quot;)+&quot;.etl_job_log &#xD;&#xA;               where &#xD;&#xA;                  job_Name = '&quot;+context.jobName+&quot;'&#xD;&#xA;               )&#xD;&#xA;               and job_Name = '&quot;+context.jobName+&quot;';&#xD;&#xA;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="update etl_job_log  "/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_15"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tJava_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCConnection_1" offsetLabelX="0" offsetLabelY="0" source="tJDBCConnection_1" target="tWaitForSqlData_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_3" offsetLabelX="0" offsetLabelY="0" source="tJava_3" target="tJDBCConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tWaitForSqlData_1" offsetLabelX="0" offsetLabelY="0" source="tWaitForSqlData_1" target="tJDBCRow_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_1" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_1" target="tJDBCRow_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_3" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_3" target="tJDBCRow_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_4" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_4" target="tJDBCRow_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_5" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_5" target="tJDBCRow_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk6"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_6" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_6" target="tJDBCRow_7">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk7"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_2" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_2" target="tJDBCRow_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_7" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_7" target="tJDBCRow_8">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk8"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_8" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_8" target="tJDBCRow_9">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk9"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_9" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_9" target="tJDBCRow_10">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk10"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_10" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_10" target="tJDBCRow_11">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk11"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_11" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_11" target="tJDBCRow_12">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk12"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_12" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_12" target="tJDBCRow_13">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk13"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_13" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_13" target="tJDBCRow_14">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk14"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_14" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_14" target="tJDBCRow_15">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk15"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCRow_15" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_15" target="tJava_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk16"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="start job"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;128;192"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;255;255"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWaitForSqlData_1"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="1.check for the signal"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="159;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;207;185"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_3"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="1.start a new run for the ETL job and set the status to BUSY"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;207;185"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_4"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="1.start a new run for the delta load history :: copy the latest row for each delta table"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;207;185"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_5"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="2.delete from the full refreh tables"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="191;255;255"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_6"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="191;255;255"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_2"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="1.remove delta history entries :: check for a BUSY state for the last run of this job"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;207;185"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_7"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="191;255;255"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_8"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="2.insert delta account history"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="191;255;255"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_9"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="2.insert delta trx history"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="191;255;255"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_10"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="2.insert delta incentivized free trials"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="191;255;255"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_11"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="2. remove overlap rows"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_12"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="2.insert delta"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_13"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="3.update the delta load history metadata table"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;207;185"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_14"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="3.signalling job is done and remove our row from the handshake table"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;207;185"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_15"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="3.update the etl job log metadata table"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;207;185"/>
+  </subjob>
+</talendfile:ProcessType>
